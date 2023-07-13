@@ -21,17 +21,20 @@
 
 # Preparation Steps
 
-1. Download Ubuntu Py3 Houdini version "houdini-19.5.640-linux_x86_64_gcc9.3.tar.gz" and place it in the "downloads" folder.
+1. Download Ubuntu Py3 Houdini version "houdini-19.5.640-linux_x86_64_gcc9.3.tar.gz" and place it in the "Downloads" folder.
 
-2. Download Houdini Docker folder "Houdini19.5.675_Docker.zip" from the GitHub repository and place it in the "downloads" folder.
+2. Download Houdini Docker folder "Houdini19.5.675_Docker.zip" from the GitHub repository and place it in the "Downloads" folder.
 
 3. Unzip the Houdini Docker folder:
-   $ unzip ~/downloads/Houdini19.5.675_Docker.zip -d ~/downloads
+   $ unzip ~/Downloads/Houdini19.5.675_Docker.zip -d ~/Downloads
+
+4. Delete the zip file:
+   $ rm ~/Downloads/Houdini19.5.675_Docker.zip
 
 # Move Houdini Installer to Docker Container
 
 1. Move the Houdini installer "houdini-19.5.640-linux_x86_64_gcc9.3.tar.gz" to the Docker container:
-   $ mv ~/downloads/houdini-19.5.640-linux_x86_64_gcc9.3.tar.gz ~/downloads/Houdini19.5.675_Docker/ubuntu
+   $ mv ~/Downloads/houdini-19.5.640-linux_x86_64_gcc9.3.tar.gz ~/Downloads/Houdini19.5.675_Docker/ubuntu
 
 # Build and Run Houdini Docker Container
 
