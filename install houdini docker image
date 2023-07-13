@@ -1,0 +1,39 @@
+# Docker Installation Steps
+
+1. Update package index:
+   $ sudo apt update
+
+2. Install Docker:
+   $ sudo apt install docker.io
+
+3. Add current user to the "docker" group:
+   $ sudo usermod -aG docker $USER
+
+4. Install Docker Compose:
+   $ sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+   $ sudo chmod +x /usr/local/bin/docker-compose
+
+5. Verify Docker Compose installation:
+   $ docker-compose --version
+
+6. Verify Docker installation:
+   $ docker --version
+
+# Preparation Steps
+
+1. Download Ubuntu Py3 Houdini version "houdini-19.5.640-linux_x86_64_gcc9.3.tar.gz" and place it in the "downloads" folder.
+
+2. Download Houdini Docker folder "Houdini19.5.675_Docker" from the GitHub repository and place it in the "downloads" folder.
+
+# Move Houdini Installer to Docker Container
+
+1. Move the Houdini installer "houdini-19.5.640-linux_x86_64_gcc9.3.tar.gz" to the Docker container.
+   $ mv ~/downloads/houdini-19.5.640-linux_x86_64_gcc9.3.tar.gz ~/downloads/Houdini19.5.675_Docker/ubuntu
+
+# Build and Run Houdini Docker Container
+
+1. Build the Houdini Docker image:
+   $ docker-compose build
+
+2. Run the Houdini Docker container:
+   $ docker-compose run hython
